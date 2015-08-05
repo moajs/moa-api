@@ -212,6 +212,8 @@ module.exports = router;
 
     gulp routes
     
+![](doc/routes.png)
+    
 ### test
 
     gulp
