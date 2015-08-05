@@ -1,4 +1,4 @@
-var users_service = require('mount-services')(__dirname).users_service;
+var users_service = require('mount-services')(__dirname).todos_service;
 
 // -- custom api
 exports.api = {

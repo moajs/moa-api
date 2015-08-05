@@ -3,7 +3,7 @@ var router = express.Router();
 
 var $middlewares  = require('mount-middlewares')(__dirname);
 
-var $ = require('mount-controllers')(__dirname).users_controller;
+var $ = require('mount-controllers')(__dirname).todos_controller;
 
 /* GET users listing. */
 // router.get('/login', $middlewares.check_api_token, $.api.login);
