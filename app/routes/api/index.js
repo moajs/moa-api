@@ -6,7 +6,13 @@ var User = require('../../models/user');
 var jwt = require('jsonwebtoken');//用来创建和确认用户信息摘要
 
 var $middlewares = require('mount-middlewares')(__dirname);
-console.log($middlewares);
+// console.log($middlewares);
+
+router.get('/', function(req, res, next) {
+  res.json({
+    a:1
+  });
+});
 
 // auth
 router.post('/auth', function(req, res, next) {

@@ -111,7 +111,12 @@ exports.api = {
 
 ## auth权限
 
-    curl -d "username=sang&password=000000" http://127.0.0.1:3000/api/auth
+### 用户管理
+
+http://127.0.0.1:3000/users
+
+### 鉴权接口
+
 
 获取token作为以后的api授权凭证
 
@@ -121,7 +126,20 @@ exports.api = {
     var token = req.body.token || req.query.token || req.headers['x-access-token'];
 
 
-示例
+下面给出参数的测试方式
+
+```
+➜  moa-api git:(master) ✗ curl -d "username=sang&password=000000" http://127.0.0.1:3000/api/auth
+{"success":true,"message":"Enjoy your token!","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NWMxOWZkZTNkYWMxZGViMDhjNDM4ODkiLCJ1c2VybmFtZSI6InNhbmciLCJwYXNzd29yZCI6IjAwMDAwMCIsImF2YXRhciI6IiIsInBob25lX251bWJlciI6IiIsImFkZHJlc3MiOiIiLCJfX3YiOjB9.ocfeQ_Kx00edNfbwDtpTrxXxotfOAo2a_zni9Ujsxwg"}%                                                       
+```
+
+即
+
+```
+token = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NWMxOWZkZTNkYWMxZGViMDhjNDM4ODkiLCJ1c2VybmFtZSI6InNhbmciLCJwYXNzd29yZCI6IjAwMDAwMCIsImF2YXRhciI6IiIsInBob25lX251bWJlciI6IiIsImFkZHJlc3MiOiIiLCJfX3YiOjB9.ocfeQ_Kx00edNfbwDtpTrxXxotfOAo2a_zni9Ujsxwg
+```
+
+### R层鉴权示例
 
 ```
 var express = require('express');
@@ -139,29 +157,40 @@ module.exports = router;
 
 ### 测试获取用户信息接口
 
-    curl http://127.0.0.1:3000/api/user/show?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NTc1OGMyNDhkZDEyMzFmN2FhOTY1ZjMiLCJ1c2VybmFtZSI6InNhbmciLCJwYXNzd29yZCI6IjAwMDAwMCIsImF2YXRhciI6IjExMTExIiwicGhvbmVfbnVtYmVyIjoiIiwiYWRkcmVzcyI6IiIsIl9fdiI6MH0.sqxnKY1ay0NbuRtqzFmDQRH49fFnc_R86GdMsrie6F4
+    curl http://127.0.0.1:3000/api/users?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NWMxOWZkZTNkYWMxZGViMDhjNDM4ODkiLCJ1c2VybmFtZSI6InNhbmciLCJwYXNzd29yZCI6IjAwMDAwMCIsImF2YXRhciI6IiIsInBob25lX251bWJlciI6IiIsImFkZHJlc3MiOiIiLCJfX3YiOjB9.ocfeQ_Kx00edNfbwDtpTrxXxotfOAo2a_zni9Ujsxwg
 
 返回结果
 
 ```
-// 20150615195329
-// http://127.0.0.1:3000/api/user/show?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NTc1OGMyNDhkZDEyMzFmN2FhOTY1ZjMiLCJ1c2VybmFtZSI6InNhbmciLCJwYXNzd29yZCI6IjAwMDAwMCIsImF2YXRhciI6IjExMTExIiwicGhvbmVfbnVtYmVyIjoiIiwiYWRkcmVzcyI6IiIsIl9fdiI6MH0.sqxnKY1ay0NbuRtqzFmDQRH49fFnc_R86GdMsrie6F4
+// 20150805133902
+// http://127.0.0.1:3000/api/users?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NWMxOWZkZTNkYWMxZGViMDhjNDM4ODkiLCJ1c2VybmFtZSI6InNhbmciLCJwYXNzd29yZCI6IjAwMDAwMCIsImF2YXRhciI6IiIsInBob25lX251bWJlciI6IiIsImFkZHJlc3MiOiIiLCJfX3YiOjB9.ocfeQ_Kx00edNfbwDtpTrxXxotfOAo2a_zni9Ujsxwg
 
 {
   "data": {
-    "user": {
-      "_id": "55758c248dd1231f7aa965f3",
-      "username": "sang",
-      "password": "000000",
-      "avatar": "11111",
-      "phone_number": "",
-      "address": "",
-      "__v": 0
-    }
+    "users": [
+      {
+        "_id": "55c19fd43dac1deb08c43888",
+        "username": "12",
+        "password": "2",
+        "avatar": "23",
+        "phone_number": "23",
+        "address": "",
+        "__v": 0
+      },
+      {
+        "_id": "55c19fde3dac1deb08c43889",
+        "username": "sang",
+        "password": "000000",
+        "avatar": "",
+        "phone_number": "",
+        "address": "",
+        "__v": 0
+      }
+    ]
   },
   "status": {
     "code": 0,
-    "msg": "success"
+    "msg": "request success!"
   }
 }
 ```
@@ -194,3 +223,32 @@ module.exports = router;
 
 
       1 passing (33ms)
+
+
+### more
+
+see http://nodeonly.com/2015/06/14/node-restful-api.html
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
+
+
+## 版本历史
+
+- v1.0.0 初始化版本
+
+## 欢迎fork和反馈
+
+- write by `i5ting` shiren1118@126.com
+
+如有建议或意见，请在issue提问或邮件
+
+## License
+
+this repo is released under the [MIT
+License](http://www.opensource.org/licenses/MIT).
