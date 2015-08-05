@@ -1,4 +1,4 @@
-# xbm-warehouse-api
+# Moa-api
 
 技术栈
 
@@ -180,9 +180,9 @@ module.exports = router;
     
 或者下面这样也行
 
-    ➜  xbm-warehouse-api  mocha test/controller
+    ➜  moa-api  mocha test/controller
     提醒:debug状态连接数据库:
-    mount routes_folder_path = /Users/sang/workspace/github/xbm-warehouse-api/app/routes
+    mount routes_folder_path = /Users/sang/workspace/github/moa-api/app/routes
 
 
       GET /users
