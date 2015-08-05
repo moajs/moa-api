@@ -11,6 +11,7 @@
 
 - 自动加载路由
 - 支持mongodb配置
+- 集成mongoosedao，快速写crud等dao接口
 - 自带用户管理
 - 使用jsonwebtoken做用户鉴权
 - 支持migrate测试
