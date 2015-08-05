@@ -196,6 +196,15 @@ module.exports = router;
 ```
 
 
+## migrate
+
+
+当需要确定model里mongoose接口是否正确的时候，可以考虑创建一个migrate
+
+    node migrate/bill_in_account.js 
+
+如果是复杂的业务逻辑放到测试里。
+
 ## task
 
 
