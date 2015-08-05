@@ -11,6 +11,7 @@
 
 - 自动加载路由
 - 支持mongodb配置
+- 自带用户管理
 - 使用jsonwebtoken做用户鉴权
 - 支持migrate测试
 - 支持mocha测试
