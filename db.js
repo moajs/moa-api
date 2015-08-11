@@ -1,5 +1,4 @@
 var connectionString, db, mongoose, options;
-var autoIncrement = require('mongoose-auto-increment');
 
 mongoose = require('mongoose');
 
