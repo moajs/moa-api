@@ -1,6 +1,6 @@
 {
-  "name": "xbm-warehouse-api",
-  "version": "0.1.0",
+  "name": "moa-api",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "start": "./node_modules/.bin/supervisor ./bin/www"
