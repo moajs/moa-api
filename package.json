@@ -22,7 +22,7 @@
     "mount-middlewares": "^1.0.5",
     "mount-routes": "^1.0.3",
     "mount-services": "^1.0.7",
-    "res.api": "^1.0.9",
+    "res.api": "^1.0.10",
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
