@@ -12,6 +12,7 @@
     "debug": "~2.2.0",
     "express": "~4.13.1",
     "jsonwebtoken": "^5.0.4",
+    "log4js": "^0.6.26",
     "moa-plugin-user": "^1.0.1",
     "mongoose": "4.0.5",
     "mongoosedao": "^1.0.10",

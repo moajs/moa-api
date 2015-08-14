@@ -1,12 +1,13 @@
 var express = require('express');
-var router = express.Router();
+var router  = express.Router();
+var log     = require('log4js').getLogger("api/index");
 
 var User = require('../../models/user');
 
 var jwt = require('jsonwebtoken');//用来创建和确认用户信息摘要
 
 var $middlewares = require('mount-middlewares')(__dirname);
-// console.log($middlewares);
+// log.info($middlewares);
 
 router.get('/', function(req, res, next) {
   res.json({
@@ -16,11 +17,11 @@ router.get('/', function(req, res, next) {
 
 // auth
 router.post('/auth', function(req, res, next) {
-  console.log(req.body);
+  log.info(req.body);
   
   User.one({username: req.body.username},function(err, user){
     if (err) throw err;
-    console.log(user);
+    log.info(user);
 
     if (!user) {
         res.json({ success: false, message: '认证失败，用户名找不到' });
