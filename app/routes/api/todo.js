@@ -1,5 +1,6 @@
 var express = require('express');
-var router = express.Router();
+var router  = express.Router();
+var log     = require('log4js').getLogger("api/todo");
 
 var $middlewares  = require('mount-middlewares')(__dirname);
 

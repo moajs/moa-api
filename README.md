@@ -20,6 +20,7 @@
 - 集成supervisor，代码变动，自动重载
 - gulp自动监控文件变动，跑测试
 - gulp routes生成路由说明
+- 使用log4js记录日志
 
 ## 开发流程
 
@@ -253,7 +254,8 @@ see http://nodeonly.com/2015/06/14/node-restful-api.html
 
 ## 版本历史
 
-- v1.0.0 初始化版本
+- v0.1.1 增加log4js作为日志管理
+- v0.1.0 初始化版本
 
 ## 欢迎fork和反馈
 
