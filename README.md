@@ -254,7 +254,7 @@ see http://nodeonly.com/2015/06/14/node-restful-api.html
 
 ## 版本历史
 
-- v0.1.1 增加log4js作为日志管理
+- v0.1.2 增加log4js作为日志管理
 - v0.1.0 初始化版本
 
 ## 欢迎fork和反馈
