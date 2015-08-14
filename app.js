@@ -14,6 +14,9 @@ var app = express();
 
 app.use(res_api);
 
+// jsonp callback setup
+app.set('jsonp callback name', 'callback');
+
 // view engine setup
 app.set('views', path.join(__dirname, 'app/views'));
 app.set('view engine', 'jade');
