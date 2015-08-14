@@ -3,7 +3,8 @@
   "version": "0.1.2",
   "private": true,
   "scripts": {
-    "start": "./node_modules/.bin/supervisor ./bin/www"
+    "start": "./node_modules/.bin/supervisor ./bin/www",
+    "pub": "npm publish ."
   },
   "dependencies": {
     "bluebird": "^2.9.34",
