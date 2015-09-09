@@ -220,7 +220,12 @@ module.exports = router;
     gulp routes
     
 ![](doc/routes.png)
-    
+
+
+杀死进程
+
+    gulp kp
+
 ### test
 
     gulp
