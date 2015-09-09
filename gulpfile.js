@@ -23,4 +23,13 @@ gulp.task('routes', function() {
   mount(app, __dirname + '/app/routes', true);
 });
 
+gulp.task('kp', function() {
+  var kp = require("kp");
+  var is_sudo = false;
+  var pre = is_sudo == true ? 'sudo' : '' ;
+  
+  kp(3000, pre);
+});
+
+
 gulp.task('default',['mocha', 'watch']);
