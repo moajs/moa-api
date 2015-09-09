@@ -30,6 +30,10 @@
 - 通过supertest来测试接口（R层）是否合法
 - 通过mocha测试其他业务代码（C层、S层、M层）
 
+## 扩展
+
+- 集成zeromq（https://github.com/i5ting/mqpush）
+
 ## RCSM分层思想
 
 ### R = routes
