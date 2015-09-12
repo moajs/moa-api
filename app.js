@@ -18,8 +18,8 @@ app.use(res_api);
 // jsonp callback setup
 app.set('jsonp callback name', 'callback');
 
-// use msgpack (if process.env.COMPRESS is 'msgpack')
-if (process.env.COMPRESS === 'msgpack') {
+// use msgpack to serialize json
+if (process.env.SERIALIZE === 'msgpack') {
   app.use(require('./app/middlewares/msgpack_json'));
 }
 
