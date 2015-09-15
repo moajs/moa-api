@@ -7,6 +7,14 @@
 var jwt = require('jsonwebtoken');//用来创建和确认用户信息摘要
 // 检查用户会话
 module.exports = function(req, res, next) {
+  if (process.env.moas) {
+    req.api_user={
+      _id : "55d8702d5472aa887b45f68c"
+    }
+    console.log('当前使用moas运行，不使用token即可访问！');
+    return next();
+  }
+
   console.log('检查post的信息或者url查询参数或者头信息');
   //检查post的信息或者url查询参数或者头信息
   var token = req.body.token || req.query.token || req.headers['x-access-token'];
