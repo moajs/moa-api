@@ -252,6 +252,10 @@ module.exports = router;
 
 see http://nodeonly.com/2015/06/14/node-restful-api.html
 
+## Todo
+
+- http://bookshelfjs.org/ 
+
 ## Contributing
 
 1. Fork it
@@ -259,7 +263,6 @@ see http://nodeonly.com/2015/06/14/node-restful-api.html
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
-
 
 ## 版本历史
 
