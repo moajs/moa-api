@@ -16,6 +16,7 @@
 - 使用jsonwebtoken做用户鉴权
 - 支持migrate测试
 - 支持mocha测试
+- 集成kue队列
 - 默认集成res.api，便于写接口
 - 集成supervisor，代码变动，自动重载
 - gulp自动监控文件变动，跑测试
@@ -202,6 +203,9 @@ module.exports = router;
 }
 ```
 
+## queue用法
+
+详见 https://github.com/moa-modules/moa-plugin-kue
 
 ## migrate
 
