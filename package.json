@@ -25,6 +25,7 @@
     "morgan": "~1.6.1",
     "mount-controllers": "^1.0.7",
     "mount-middlewares": "^1.0.5",
+    "mount-queues": "^1.0.0",
     "mount-routes": "^1.0.3",
     "mount-services": "^1.0.7",
     "res.api": "^1.0.11",
