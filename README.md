@@ -30,6 +30,17 @@
 - gulp routes生成路由说明
 - 使用log4js记录日志
 
+## Starter
+
+```
+git clone --depth=1 https://github.com/moajs/moa-api.git api
+
+cd api
+npm install
+cp config/kue.example.js    config/kue.js
+cp config/redis.example.js  config/redis.js
+export MOA_PORT=3040 && npm start
+```
 ## 开发流程
 
 - 确定models内容，如果是已有库或已有模型，可以直接使用
