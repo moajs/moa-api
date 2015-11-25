@@ -1,1 +1,0 @@
-../../node_modules/moa-plugin-kue/app/queues/index.js

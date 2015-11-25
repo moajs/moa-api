@@ -13,8 +13,8 @@ var log           = log4js.getLogger("moa-api");
 
 var app = express();
 
-var $queues = require('mount-queues')(__dirname);
-console.log($queues);
+// var $queues = require('mount-queues')(__dirname);
+// console.log($queues);
 
 app.use(res_api);
 
