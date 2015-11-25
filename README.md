@@ -23,13 +23,12 @@
 - 使用jsonwebtoken做用户鉴权
 - 支持migrate测试
 - 支持mocha测试
-- 集成kue队列
 - 默认集成res.api，便于写接口
 - 集成supervisor，代码变动，自动重载
 - gulp自动监控文件变动，跑测试
 - gulp routes生成路由说明
 - 使用log4js记录日志
-
+- 集成kue队列[需要使用mount-queues插件]
 ## Starter
 
 前置条件，保证以下服务可以正常访问
