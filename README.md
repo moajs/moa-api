@@ -34,7 +34,6 @@
 
 前置条件，保证以下服务可以正常访问
 
-- redis
 - mongodb
 
 具体操作如下
@@ -44,8 +43,6 @@ git clone --depth=1 https://github.com/moajs/moa-api.git api
 
 cd api
 npm install
-cp config/kue.example.js    config/kue.js
-cp config/redis.example.js  config/redis.js
 export MOA_PORT=3040 && npm start
 ```
 
