@@ -2,10 +2,10 @@
 
 技术栈
 
-- express
-- mongoose
-- bluebird
-- res.api
+- [base2(mirco kernel)](https://github.com/base-n/base2-core)
+- [mongoose](https://github.com/Automattic/mongoose)
+- [bluebird](https://github.com/petkaantonov/bluebird)
+- [res.api](https://github.com/moajs/res.api)
 
 ## 前后端分离实践
 
