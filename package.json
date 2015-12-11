@@ -1,20 +1,18 @@
 {
   "name": "moa-api",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "private": false,
   "scripts": {
     "start": "./node_modules/.bin/supervisor ./bin/www",
     "pub": "npm publish ."
   },
   "dependencies": {
+    "base2": "^1.0.14",
     "bluebird": "^2.9.34",
-    "body-parser": "~1.13.2",
-    "cookie-parser": "~1.3.5",
     "debug": "~2.2.0",
-    "express": "~4.13.1",
+    "express": "^4.13.3",
     "ioredis": "^1.9.1",
     "is": "^3.1.0",
-    "jade": "^1.11.0",
     "jsonwebtoken": "^5.0.4",
     "kp": "^1.1.0",
     "log4js": "^0.6.26",
@@ -24,10 +22,8 @@
     "morgan": "~1.6.1",
     "mount-controllers": "^1.0.7",
     "mount-middlewares": "^1.0.5",
-    "mount-routes": "^1.0.3",
     "mount-services": "^1.0.7",
-    "res.api": "^1.0.11",
-    "serve-favicon": "~2.3.0"
+    "res.api": "^1.0.11"
   },
   "devDependencies": {
     "chai": "^3.2.0",

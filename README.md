@@ -296,8 +296,9 @@ see http://nodeonly.com/2015/06/14/node-restful-api.html
 
 ## 版本历史
 
+- v1.0.0 使用base2作为微内核，移除之前express用的依赖
 - v0.1.2 增加log4js作为日志管理
-- v0.1.0 初始化版本
+- v0.1.0 初始化版本，以express为基础，做的express最佳事件
 
 ## 欢迎fork和反馈
 
