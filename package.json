@@ -32,6 +32,7 @@
     "gulp-mocha": "^2.1.3",
     "gulp-watch": "^4.3.4",
     "mocha": "^2.2.5",
+    "mount-routes": "^1.0.5",
     "supertest": "^1.0.1",
     "supervisor": "^0.7.1"
   }
