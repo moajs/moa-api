@@ -6,11 +6,11 @@ require('chai').should();
 var app = require('../../app');
 
 describe('GET /users', function(){
-  it('respond with json', function(done){
+  it('respond with json or msgpack', function(done){
     request(app)
       .get('/api/user/login')
       .set('Accept', 'application/json')
-      .expect('Content-Type', /json/)
+      .expect('Content-Type', /json|msgpack/)
       .expect(200, done);
   })
 })
