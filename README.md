@@ -242,6 +242,14 @@ module.exports = router;
 
 如果是复杂的业务逻辑放到测试里。
 
+## 使用msgpack序列化json
+
+支持使用msgpack序列化json，客户端也需要对应的进行decode。
+
+目前默认是不开启的。
+
+若要开启，需将process.env.SERIALIZE设为'msgpack'：如SERIALIZE=msgpack node bin/www
+
 ## task
 
 

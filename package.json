@@ -1,6 +1,6 @@
 {
   "name": "moa-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "scripts": {
     "start": "./node_modules/.bin/supervisor ./bin/www",
