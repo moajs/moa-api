@@ -6,14 +6,13 @@ var res_api       = require('res.api');
 var log           = log4js.getLogger("moa-api");
 
 var app = require('base2')({
-  // debug: true,
-  root:__dirname,
   "views": "app/views",
   "routes": "app/routes",
   "public": "public",
+  pre: function (app){
+    app.use(res_api);
+  }
 })
-
-app.use(res_api);
 
 // use msgpack to serialize json
 if (process.env.SERIALIZE === 'msgpack') {
