@@ -33,9 +33,10 @@ app.use(log4js.connectLogger(log4js.getLogger('http'), { level: 'auto' }));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
+  res.api_error_code = 404;
+  return res.api_error({
+    message: 'Not Found'
+  });
 });
 
 // error handlers
@@ -43,20 +44,18 @@ app.use(function(req, res, next) {
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: err
-    });
+  res.api_error_code = err.status || 500;
+  return res.api_error({
+    message: err.message,
+    error: err
   });
 }
 
 // production error handler
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
-  res.status(err.status || 500);
-  res.render('error', {
+  res.api_error_code = err.status || 500;
+  return res.api_error({
     message: err.message,
     error: {}
   });
