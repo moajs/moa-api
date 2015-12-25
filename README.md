@@ -294,6 +294,12 @@ see http://nodeonly.com/2015/06/14/node-restful-api.html
 
 - http://bookshelfjs.org/ 
 
+## Moajs微信用户组
+
+![](doc/wechat.jpg)
+
+如果加不上，请加微信`shiren1118`,说明加入原因
+
 ## Contributing
 
 1. Fork it
