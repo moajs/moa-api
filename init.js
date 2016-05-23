@@ -1,8 +1,6 @@
 var fs = require('fs')
   , log4js = require('log4js')
-  
-  
-var log_path = 'logs'
+  , log_path = 'logs'
   , is_exist = fs.existsSync(log_path)
   , log = log4js.getLogger("moa-api");
 
