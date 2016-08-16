@@ -44,10 +44,12 @@ app.use(function(req, res, next) {
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
-  res.api_error_code = err.status || 500;
-  return res.api_error({
-    message: err.message,
-    error: err
+  app.use(function(err, req, res, next) {
+    res.api_error_code = err.status || 500;
+    return res.api_error({
+      message: err.message,
+      error: err
+    });
   });
 }
 
